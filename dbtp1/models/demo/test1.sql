@@ -1,8 +1,16 @@
-with filter_city as(
-        select * from {{source('fivetran','customers')}}
-        ),
- filter as (
-           select ID,CONCAT(FIRST_NAME,CITY),max(age) AS FULL_NAME from filter_city
-           )
+with filter_city as (
+    select *
+    from {{ source('fivetran', 'customers') }}
+),
 
-select * from filter
+filtered_customers as (
+    select
+        ID,
+        CONCAT(FIRST_NAME, ' ', CITY) as full_name,
+        max(age) as max_age
+    from filter_city
+    group by ID, FIRST_NAME, CITY
+)
+
+select *
+from filtered_customers
