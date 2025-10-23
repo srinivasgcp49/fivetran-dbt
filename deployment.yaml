@@ -13,6 +13,14 @@ jobs:
     retryOnFailure: false
     steps:
       - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
-        command: dbt run -m concat # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.
+        command: dbt run -m concat
+      - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
+        command: dbt run -m concat1 # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.
+      - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
+        command: dbt run -m test1
+      - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
+        command: dbt run -m my_first_dbt_model
+      - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
+        command: dbt run -m my_second_dbt_model
       - name: test models
         command: dbt test -m concat # This example will run all your t
