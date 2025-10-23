@@ -24,3 +24,11 @@ jobs:
         command: dbt run -m my_second_dbt_model
       - name: test models
         command: dbt test -m concat # This example will run all your t
+      - name: test models
+        command: dbt test -m concat1
+      - name: test models
+        command: dbt test -m test1
+      - name: test models
+        command: dbt test -m my_first_dbt_model
+      - name: test models
+        command: dbt test -m my_second_dbt_model
