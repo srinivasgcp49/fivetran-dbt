@@ -11,4 +11,4 @@ SELECT
     department,
     salary,
     hire_date
-FROM {{ source('fivetran', 'public') }};
+FROM {{ source('fivetran', 'employee') }};
