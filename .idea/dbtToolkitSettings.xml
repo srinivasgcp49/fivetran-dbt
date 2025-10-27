@@ -71,13 +71,13 @@
       </map>
     </option>
     <option name="dbtProjectName" value="dbtp1" />
-    <option name="dbtProjectsDir" value="$PROJECT_DIR$/dbtp1" />
+    <option name="dbtProjectsDir" value="$PROJECT_DIR$" />
     <option name="dbtSeedPaths">
       <list>
         <option value="seeds" />
       </list>
     </option>
-    <option name="dbtTargetDir" value="$PROJECT_DIR$/dbtp1/target" />
+    <option name="dbtTargetDir" value="$PROJECT_DIR$/target" />
     <option name="dbtTestPaths">
       <list>
         <option value="tests" />
